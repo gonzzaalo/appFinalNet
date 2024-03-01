@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appFinalNet.Views.InicioApp"
+             Title="Página Principal">
+    <Grid>
+        <Image Source="https://i.pinimg.com/564x/33/54/35/335435ffc8b9adbc32befe2acd90577d.jpg" Aspect="AspectFill" />
+        <VerticalStackLayout Spacing="10" Margin="50,10,50,10">
+        <Label 
+            Text=""
+            VerticalOptions="Start" 
+            HorizontalOptions="Center" />
+        <Button
+            x:Name="AgregarProducto"
+            Text="Agregar Producto"
+            Clicked="AgregarProducto_Clicked" 
+            Style="{StaticResource EstiloBotonDestacado}"
+            />
+
+            <Button
+            x:Name="EdigarProducto"
+            Text="Editar Producto"
+            Clicked="EdigarProducto_Clicked"
+            Style="{StaticResource EstiloBotonDestacado}"/>
+
+            <Button
+            x:Name="EliminarProducto"
+            Text="Eliminar Producto"
+            Clicked="EliminarProducto_Clicked"
+             Style="{StaticResource EstiloBotonDestacado}" />
+
+            <ScrollView HeightRequest="350">
+            <CollectionView x:Name="ProductosCollectionView"
+                        SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                            <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="*,2*,*">
+                                <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Source="{Binding imagen_url}" Aspect="AspectFill"></Image>
+                                <Label Text="Nombre:" FontSize="18" FontAttributes="Bold" Margin="5,0,0,0" TextColor="Black" Grid.Row="0" Grid.Column="1"></Label>
+                                <Label Text="{Binding nombre}" FontSize="10" FontAttributes="Bold" Margin="2,0,0,2" TextColor="Black" Grid.Row="0" Grid.Column="2"></Label>
+                                <Label Text="Descripción:" FontSize="18" FontAttributes="Bold" Margin="5,0,0,0" TextColor="Black" Grid.Row="1" Grid.Column="1"></Label>
+                                <Label Text="{Binding descripcion}" FontSize="10" Margin="2,0,0,0" TextColor="Black" Grid.Row="1" Grid.Column="2"></Label>
+                                <Label Text="Precio:" FontSize="18" FontAttributes="Bold" Margin="5,0,0,0" TextColor="Black" Grid.Row="2" Grid.Column="1"></Label>
+                                <Label Text="{Binding precio}" FontSize="10" FontAttributes="Bold" Margin="2,0,0,0" TextColor="Black" Grid.Row="2" Grid.Column="2"></Label>
+                            </Grid>
+
+
+
+
+                        </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+
+    </VerticalStackLayout>
+    </Grid>
+    
+</ContentPage>

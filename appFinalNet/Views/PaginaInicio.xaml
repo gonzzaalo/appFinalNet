@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appFinalNet.Views.PaginaInicio"
+             Title="Pagina Inicio">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <!--La imagen ocupará todo el espacio disponible-->
+            <RowDefinition Height="auto" />
+            <!--El contenido restante ocupará solo el espacio que necesite-->
+        </Grid.RowDefinitions>
+
+        <Image Source="Resources/Images/mili.png" Aspect="Fill" />
+
+        <VerticalStackLayout Grid.Row="1" VerticalOptions="End" HorizontalOptions="Center">
+            <Label 
+            Text=""
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <Button
+            x:Name="Productos"
+            Text="Productos"
+            Clicked="Productos_Clicked"
+            Style="{StaticResource EstiloBotonDestacado}"
+            />
+
+            
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
+
+    
+    
+     <!--BOTON ARRIBA-->
+<!--<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+         La imagen ocupará todo el espacio disponible 
+        <RowDefinition Height="auto" />
+         El contenido restante ocupará solo el espacio que necesite 
+    </Grid.RowDefinitions>
+
+    <Image Source="Resources/Images/mili.png" Aspect="Fill" />
+
+    <VerticalStackLayout Grid.Row="1" VerticalOptions="End" HorizontalOptions="Center">
+        <Label 
+            Text=""
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button
+            x:Name="Productos"
+            Text="Productos"
+            Clicked="Productos_Clicked"
+            Style="{StaticResource EstiloBotonDestacado}"
+            />
+    </VerticalStackLayout>
+</Grid>-->
+
+
+
+
+
+
+<!--<Grid>
+    <Image Source="Resources/Images/mili.png" Aspect="Fill" />
+
+    <VerticalStackLayout>
+
+        <Label 
+            Text=""
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button
+            x:Name="Productos"
+            Text="Productos"
+            Clicked="Productos_Clicked"
+            Style="{StaticResource EstiloBotonDestacado}"
+            />
+
+    </VerticalStackLayout>
+</Grid>-->

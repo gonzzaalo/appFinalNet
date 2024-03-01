@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appFinalNet.Views.AgregarProducto"
+             Title="Agregar Producto">
+
+    <Grid>
+
+        <Image Source="https://www.canva.com/p/templates/EAFicYgl5eI-fondo-de-pantalla-para-tel-fono-floral-org-nico-rosa/" Aspect="AspectFill"/>
+        <ScrollView>
+        <VerticalStackLayout Spacing="10" Margin="50,10,50,10" HorizontalOptions="Center">
+            <Label 
+        Text="Agregar Productos"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" />
+
+             <Label>Nombre:</Label>
+             <Entry x:Name="txtNombre"></Entry>
+
+                <Label>Descripcion:</Label>
+             <Entry x:Name="txtDescripcion"></Entry>
+
+                <Label>Precio:</Label>
+                <Entry x:Name="txtPrecio" Keyboard="Numeric"></Entry>
+
+                <Label>URl de la imagen:</Label>
+             <Entry x:Name="txtImagenUrl"></Entry>
+
+                <Button
+                x:Name="GuardarBtn"
+                Text="Guardar"
+                Clicked="GuardarBtn_Clicked"
+                Style="{StaticResource EstiloBotonDestacado}" />
+
+                <Button
+                x:Name="CancelarBtn"
+                Text="Cancelar"
+                Clicked="CancelarBtn_Clicked"
+                Style="{StaticResource EstiloBotonDestacado}" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
